@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Buscador de Películas</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <h1>🎬 Buscador de Películas</h1>
+    </header>
+    <section class="search-container" aria-label="Buscador de películas">
+        <input
+                type="text"
+                id="searchInput"
+                placeholder="Busca tu película favorita..."
+                aria-label="Buscar película"
+        />
+        <select id="typeFilter" aria-label="Filtrar por tipo">
+            <option value="">Todos</option>
+            <option value="movie">Película</option>
+            <option value="series">Serie</option>
+            <option value="episode">Episodio</option>
+        </select>
+        <input
+                type="number"
+                id="yearFilter"
+                placeholder="Año"
+                aria-label="Filtrar por año"
+                min="1900"
+                max="2099"
+        />
+        <button id="searchButton">Buscar</button>
+    </section>
+
+    <section id="results" class="results-container" aria-live="polite"></section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
